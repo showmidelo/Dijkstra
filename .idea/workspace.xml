@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b179d253-39ae-4436-8a8b-464ade77dd66" name="Changes" comment="adding Vertex methods" />
+=======
+    <list default="true" id="b179d253-39ae-4436-8a8b-464ade77dd66" name="Changes" comment="Creating Vertex Class and its structure function">
+      <change beforePath="$PROJECT_DIR$/vertex.py" beforeDir="false" afterPath="$PROJECT_DIR$/vertex.py" afterDir="false" />
+    </list>
+>>>>>>> origin/master
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +22,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
     <option name="RESET_MODE" value="MIXED" />
+=======
+>>>>>>> origin/master
   </component>
   <component name="ProjectId" id="1xCqfjs1K4pIFRXiizM9jh6X6GN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -112,6 +121,7 @@
       <option name="project" value="LOCAL" />
       <updated>1629870792083</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00004" summary="adding Vertex methods">
       <created>1629871188605</created>
       <option name="number" value="00004" />
@@ -120,6 +130,9 @@
       <updated>1629871188605</updated>
     </task>
     <option name="localTasksCounter" value="5" />
+=======
+    <option name="localTasksCounter" value="4" />
+>>>>>>> origin/master
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,10 +151,14 @@
     <MESSAGE value="Creating Router Class" />
     <MESSAGE value="Creating Router Class&#10;Open the file and reading it" />
     <MESSAGE value="Creating Vertex Class and its structure function" />
+<<<<<<< HEAD
     <MESSAGE value="Creating Router Class&#10;Open the file and reading it&#10;Creating Vertex Class and its structure function" />
     <MESSAGE value="Adding" />
     <MESSAGE value="Adding Vertex methodes" />
     <MESSAGE value="adding Vertex methods" />
     <option name="LAST_COMMIT_MESSAGE" value="adding Vertex methods" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="Creating Vertex Class and its structure function" />
+>>>>>>> origin/master
   </component>
 </project>
