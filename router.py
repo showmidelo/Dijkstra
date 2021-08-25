@@ -1,3 +1,9 @@
+from vertex import *
+from edge import *
+from heap import *
+from copy import deepcopy
+
+
 class Router:
 
     def __init__(self, map_file_address):
