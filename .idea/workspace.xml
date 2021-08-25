@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b179d253-39ae-4436-8a8b-464ade77dd66" name="Changes" comment="adding Vertex methods" />
+    <list default="true" id="b179d253-39ae-4436-8a8b-464ade77dd66" name="Changes" comment="Creating Edge class and its methods">
+      <change beforePath="$PROJECT_DIR$/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/router.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629871188605</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Creating Edge class and its methods">
+      <created>1629872874931</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629872874931</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Creating Edge class and its methods">
+      <created>1629872965699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629872965699</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +161,7 @@
     <MESSAGE value="Adding" />
     <MESSAGE value="Adding Vertex methodes" />
     <MESSAGE value="adding Vertex methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding Vertex methods" />
+    <MESSAGE value="Creating Edge class and its methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating Edge class and its methods" />
   </component>
 </project>
