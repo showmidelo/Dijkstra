@@ -12,7 +12,7 @@ class Client:
         v = {}
 
         with socket() as sock:
-            sock.connect(('127.0.0.1', 80))
+            sock.connect(('127.0.0.1', 8000))
             b = sock.recv(2048).decode('ascii')
             self.router = Router(str(b))
             a = input("Enter two number: ")
