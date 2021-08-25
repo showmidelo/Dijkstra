@@ -12,6 +12,7 @@ class Server:
         with socket() as welcoming_socket:
             welcoming_socket.bind(('', 8000))
             welcoming_socket.listen()
+            print("waiting for someone to connect...")
             while True:
                 client_socket, address = welcoming_socket.accept()
                 Thread(target=self.client_handler, args=(client_socket,)).start()
