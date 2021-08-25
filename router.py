@@ -2,6 +2,7 @@ from vertex import *
 from edge import *
 from heap import *
 from copy import deepcopy
+from constant import *
 
 
 class Router:
@@ -13,7 +14,7 @@ class Router:
         self.map_file_address = map_file_address
 
         # open the file and reading lines of it
-        with open(map_file_address, 'r') as MAP:
+        with open(Constant.map_file, 'r') as MAP:
             n, m = [int(i) for i in MAP.readline().split()]
             
         # reading vertex
@@ -60,3 +61,6 @@ class Router:
             gereh_maghsad = gereh_maghsad.perv
         masir.reverse()
         return masir
+
+
+a = Router(Constant.map_file)
