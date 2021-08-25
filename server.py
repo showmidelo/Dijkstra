@@ -6,18 +6,18 @@ import time
 
 class Server:
     def __init__(self):
-        self.router = Router(r"C:\Users\Lion\Desktop\test.txt")
+        self.router = Router(Constant.map_file)
 
     def start(self):
         with socket() as welcoming_socket:
-            welcoming_socket.bind(('', 80))
+            welcoming_socket.bind(('', 8000))
             welcoming_socket.listen()
             while True:
                 client_socket, address = welcoming_socket.accept()
                 Thread(target=self.client_handler, args=(client_socket,)).start()
 
     def client_handler(self, sock: socket):
-        sock.send(r"C:\Users\Lion\Desktop\test.txt".encode('ascii'))
+        sock.send(Constant.map_file.encode('ascii'))
         try:
             while True:
                 a, _ = sock.recvfrom(2048)
