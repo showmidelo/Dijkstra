@@ -1,5 +1,4 @@
 class Vertex:
-
     def __init__(self, identity, y, x, value=float('inf')):
         self.identity = identity
         self.y = y
@@ -7,7 +6,7 @@ class Vertex:
         self.adjacent_vertices = []
         self.__value = value
         self.perv = None
-        
+
     def get_id(self):
         return self.identity
 
