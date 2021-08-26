@@ -21,12 +21,12 @@ class Server:
         sock.send(Constant.map_file.encode('ascii'))
         try:
             while True:
-                a, _ = sock.recvfrom(2048)
-                a = a.decode("ascii")
-                print(a)
-                b, c = a.split()
-                d = self.router.find_shortest_path(int(b), int(c))
-                strings = [str(i) for i in d]
+                data, _ = sock.recvfrom(2048)
+                data = data.decode("ascii")
+                print(data)
+                first_vertice, second_vertice = data.split()
+                roads = self.router.find_shortest_path(int(first_vertice), int(second_vertice))
+                strings = [str(road) for road in roads]
                 sock.send(" ".join(strings).encode("ascii"))
                 time.sleep(1)
         except Exception:
