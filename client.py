@@ -15,19 +15,19 @@ class Client:
         with socket() as sock:
             sock.connect(('127.0.0.1', 8000))
             # receive what server has sent client
-            b = sock.recv(2048).decode('ascii')
-            self.router = Router(str(b))
+            map = sock.recv(2048).decode('ascii')
+            self.router = Router(str(map))
             # input two numbers for using in the find shortest path function
-            a = input("Enter two number: ")
-            f, g = a.split()
-            masir = self.router.find_shortest_path(int(f), int(g))
+            inputs = input("Enter two number: ")
+            first_vertice, second_vertice = inputs.split()
+            path = self.router.find_shortest_path(int(first_vertice), int(second_vertice))
             # send two inputted numbers to server
-            sock.send(a.encode('ascii'))
+            sock.send(inputs.encode('ascii'))
             # receive the road list that server has sent us
-            c = sock.recv(2048).decode("ascii")
-            print(c)
+            roads = sock.recv(2048).decode("ascii")
+            print(roads)
 
-            with open(b, 'r') as MAP:
+            with open(map, 'r') as MAP:
                 n, m = [int(i) for i in MAP.readline().split()]
                 # reading till n line and add them to list (self.__vertices)
                 for i in range(n):
@@ -49,24 +49,24 @@ class Client:
                 fig, ax = plt.subplots(nrows=1, ncols=1)
                 fig.set_facecolor('#FFFFFF')
                 # cause we have duplicate items in dictionary we use this trick to remove them
-                Zoj = True
-                for yal in self.__edges:
-                    if Zoj:
-                        x1 = self.__edges[yal].head().x
-                        y1 = self.__edges[yal].head().y
-                        x2 = self.__edges[yal].tail().x
-                        y2 = self.__edges[yal].tail().y
+                Even = True
+                for edge in self.__edges:
+                    if Even:
+                        x1 = self.__edges[edge].head().x
+                        y1 = self.__edges[edge].head().y
+                        x2 = self.__edges[edge].tail().x
+                        y2 = self.__edges[edge].tail().y
                         plt.plot([x1, x2], [y1, y2], marker='o', color='#d8d8d8')
-                        plt.annotate(str(self.__edges[yal].head().identity), (x1, y1))
-                        plt.annotate(str(self.__edges[yal].tail().identity), (x2, y2))
-                    Zoj = not Zoj
-                x_ha = []
-                y_ha = []
+                        plt.annotate(str(self.__edges[edge].head().identity), (x1, y1))
+                        plt.annotate(str(self.__edges[edge].tail().identity), (x2, y2))
+                    Even = not Even
+                xs = []
+                ys = []
                 # plot the road between two numbers (or vertices)  that client gave us
-                for e in masir:
-                    x_ha.append(e.x)
-                    y_ha.append(e.y)
-                plt.plot(x_ha, y_ha, marker='o', color='#FC33FF')
+                for road in path:
+                    xs.append(road.x)
+                    ys.append(road.y)
+                plt.plot(xs, ys, marker='o', color='#FC33FF')
                 plt.show()
 
 
