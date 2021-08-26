@@ -33,7 +33,8 @@ class Router:
                 self.__edges[id2, id1] = edge
                 v[id1].adjacent_vertices.append(v[id2])
                 v[id2].adjacent_vertices.append(v[id1])
-                
+
+    # this function give us the list of shortest road between to vertices
     def find_shortest_path(self, start_id, end_id):
         
         edges = deepcopy(self.__edges)
@@ -49,7 +50,6 @@ class Router:
         while end_id in heap:
             # removing the least value of vertices from list and putting it in v
             v = heap.pop()
-            
             for hamsaye in v.adjacent_vertices:
                 masir_ta_hamsaye = edges[v.identity, hamsaye.identity].get_weight()
                 if v.value + masir_ta_hamsaye < hamsaye.value:
