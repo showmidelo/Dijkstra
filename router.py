@@ -62,4 +62,4 @@ class Router:
 
 
 a = Router(Constant.map_file)
-print(a.find_shortest_path(4,24))
+
