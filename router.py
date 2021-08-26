@@ -36,11 +36,11 @@ class Router:
 
     # this function give us the list of shortest road between to vertices
     def find_shortest_path(self, start_id, end_id):
-        
+
         edges = deepcopy(self.__edges)
         vertices = deepcopy(self.__vertices)
         heap = MinHeap(vertices)
-        gereh_maghsad = heap[end_id]
+        last_knot = heap[end_id]
         road = []
         
         # giving the first vertice zero value
@@ -48,17 +48,18 @@ class Router:
         while end_id in heap:
             # removing the least value of vertices from list and putting it in v
             v = heap.pop()
-            for hamsaye in v.adjacent_vertices:
-                masir_ta_hamsaye = edges[v.identity, hamsaye.identity].get_weight()
-                if v.value + masir_ta_hamsaye < hamsaye.value:
-                    heap.modify(hamsaye.identity, v.value + masir_ta_hamsaye)
-                    hamsaye.perv = v
+            for adjacent in v.adjacent_vertices:
+                road_to_adjacent = edges[v.identity, adjacent.identity].get_weight()
+                if v.value + road_to_adjacent < adjacent.value:
+                    heap.modify(adjacent.identity, v.value + road_to_adjacent)
+                    adjacent.perv = v
                     
-        while gereh_maghsad is not None:
-            road.append(gereh_maghsad)
-            gereh_maghsad = gereh_maghsad.perv
+        while last_knot is not None:
+            road.append(last_knot)
+            last_knot = last_knot.perv
         road.reverse()
         return road
 
 
 a = Router(Constant.map_file)
+print(a.find_shortest_path(4,24))
