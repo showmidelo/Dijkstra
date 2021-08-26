@@ -41,9 +41,7 @@ class Router:
         vertices = deepcopy(self.__vertices)
         heap = MinHeap(vertices)
         gereh_maghsad = heap[end_id]
-        masir = []
-        x_ha = []
-        y_ha = []
+        road = []
         
         # giving the first vertice zero value
         heap.modify(start_id, 0)
@@ -57,10 +55,10 @@ class Router:
                     hamsaye.perv = v
                     
         while gereh_maghsad is not None:
-            masir.append(gereh_maghsad)
+            road.append(gereh_maghsad)
             gereh_maghsad = gereh_maghsad.perv
-        masir.reverse()
-        return masir
+        road.reverse()
+        return road
 
 
 a = Router(Constant.map_file)
