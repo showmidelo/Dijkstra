@@ -46,7 +46,7 @@ class Router:
         heap.modify(start_id, 0)
 
         while end_id in heap:
-            # removing the least value of vertices from list and putting it in v
+            # removing the least value of vertices from list and putting it in "least_value_vertice"
             least_value_vertice = heap.pop()
 
             # calculate the next vertice for moving to it in the shortest way
