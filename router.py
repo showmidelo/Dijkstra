@@ -6,7 +6,6 @@ from constant import *
 
 
 class Router:
-
     def __init__(self, map_file_address):
         self.__edges = {}
         self.__vertices = []
@@ -49,12 +48,14 @@ class Router:
         while end_id in heap:
             # removing the least value of vertices from list and putting it in v
             least_value_vertice = heap.pop()
+
             # calculate the next vertice for moving to it in the shortest way
             for adjacent in least_value_vertice.adjacent_vertices:
                 road_to_adjacent = edges[least_value_vertice.identity, adjacent.identity].get_weight()
                 if least_value_vertice.value + road_to_adjacent < adjacent.value:
                     heap.modify(adjacent.identity, least_value_vertice.value + road_to_adjacent)
                     adjacent.perv = least_value_vertice
+
         # this loop add the vertices that have been covered to the "road" list
         while last_knot is not None:
             road.append(last_knot)
