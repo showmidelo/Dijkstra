@@ -34,7 +34,7 @@ class Router:
                 v[id1].adjacent_vertices.append(v[id2])
                 v[id2].adjacent_vertices.append(v[id1])
 
-    # this function give us the list of shortest road between to vertices
+    # this function give us the list of shortest road between two vertices
     def find_shortest_path(self, start_id, end_id):
 
         edges = deepcopy(self.__edges)
