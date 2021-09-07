@@ -1,17 +1,17 @@
 # Dijkstra's algorithm
 
- ---------------------------------------------
  **Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for 
  example, road networks. It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published three years
  later.**
+ 
 ---------------
-we have a map that we want to make a graph with some vertices from it, and their edges have weight (they could be time,
+we have a map that we want to make a graph with some vertices from it and their edges have weight (they could be time,
 Distances or etc).
 
 ![](Map%20with%20points.jpg)
 
 ---------------
-we extract the Coordinates of vertices from Google map and put it in a file that shows
+we extract the Coordinates of vertices from Google Map and put it in a file that shows
 Quantity of vertices and edges, the identity of vertices and Coordinates of them, Connection of two vertices.
 like this:
 
@@ -90,6 +90,6 @@ like this:
 ---------------
 ## Output :
 by these codes of Project we could find the shortest way between two vertices that client (it can be infinity) asked
-from the server and plot it to show to client.
+from the server and plot it to show to the client.
 
 ![](client_output.png)
