@@ -8,7 +8,7 @@
 we have a map that we want to make a graph with some vertices from it, and their edges have weight (they could be time,
 Distances or etc).
 
-![](Map with points.jpg)
+![](Map%20with%20points.jpg)
 
 ---------------
 we extract the Coordinates of vertices from Google map and put it in a file that shows
