@@ -12,7 +12,7 @@ Distances or etc).
 
 ---------------
 we extract the Coordinates of vertices from Google map and put it in a file that shows
-Quantity of vertices and edges ,the identity of vertices and Coordinates of them, Connection of two vertices.
+Quantity of vertices and edges, the identity of vertices and Coordinates of them, Connection of two vertices.
 like this:
 
 ```
