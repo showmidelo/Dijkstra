@@ -92,4 +92,4 @@ like this:
 by these codes of Project we could find the shortest way between two vertices that client (it can be infinity) asked
 from the server and plot it to show to client.
 
-![](C:\Users\Lion\Dijkstra\client_output.png)
+![](client_output.png)
